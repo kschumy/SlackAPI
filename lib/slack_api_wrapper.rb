@@ -20,8 +20,8 @@ class SlackApiWrapper
 				"token" => TOKEN,
 				"channel" => channel,
 				"text" => message,
-				"username" => "GBPackersBot",
-				"icon_emoji" => ":gopackgo:",
+				"username" => "FrontRowNewsBot",
+				"icon_emoji" => ":nerd_face:",
 				"as_user" => "false"
 			},
 			:header => { 'Content-Type' => 'application/x-www-form-urlencoded' }
