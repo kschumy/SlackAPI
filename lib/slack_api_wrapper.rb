@@ -12,4 +12,20 @@ class SlackApiWrapper
 			return []
 		end
 	end
+
+	def self.send_message(channel, message)
+		message_url = "#{URL}chat.postMessage"
+		response = HTTParty.post(message_url,
+			body: {
+				"token" => TOKEN,
+				"channel" => channel,
+				"text" => message,
+				"username" => "GBPackersBot",
+				"icon_emoji" => ":gopackgo:",
+				"as_user" => "false"
+			},
+			:header => { 'Content-Type' => 'application/x-www-form-urlencoded' }
+		)
+		return response.success?
+	end
 end
