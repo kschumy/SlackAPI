@@ -6,11 +6,22 @@ class SlackApiWrapper
 
 	def self.list_channels
 		response = HTTParty.get("#{URL}channels.list?token=#{TOKEN}")
+
+		channel_list = [] # got from lib/channel
+
 		if response["channels"] # if statement just in case something went wrong.
-			return response["channels"] # response.parsed_response["channels"]
-		else
-			return []
+			response["channels"].each do |channel|
+				channel_list << Channel.new(channel["name"], channel["id"])
+			end
 		end
+
+		return channel_list
+
+		# if response["channels"] # if statement just in case something went wrong.
+		# 	return response["channels"] # response.parsed_response["channels"]
+		# else
+		# 	return []
+		# end
 	end
 
 	def self.send_message(channel, message)
