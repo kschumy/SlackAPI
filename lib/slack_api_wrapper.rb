@@ -37,6 +37,7 @@ class SlackApiWrapper
 			},
 			:header => { 'Content-Type' => 'application/x-www-form-urlencoded' }
 		)
-		return response.success?
+		# return response.success? # initial way we did this.
+		return response # changed after testing. Can keep the original way if you want
 	end
 end
