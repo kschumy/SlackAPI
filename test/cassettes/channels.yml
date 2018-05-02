@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://slack.com/api/chat.postMessage
+    body:
+      encoding: UTF-8
+      string: token=<SLACK_TOKEN>&channel=CAGCPB64A&text=test%20message&username=FrontRowNewsBot&icon_emoji=%3Anerd_face%3A&as_user=false
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '250'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 02 May 2018 17:25:55 GMT
+      Server:
+      - Apache
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      X-Oauth-Scopes:
+      - read,client,identify,post,apps
+      Pragma:
+      - no-cache
+      X-Accepted-Oauth-Scopes:
+      - chat:write:bot,post
+      X-Xss-Protection:
+      - '0'
+      X-Slack-Req-Id:
+      - c4f4818f-98a2-41ae-bd73-2d43cb2c8e82
+      X-Slack-Backend:
+      - h
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-npmn
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 8b49bec6ed0cc97f9ccf13728cb06b26.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 47fj8pFlO30-DW4f2apHv5v4wB9g8mUUiJn0M_pG9MWeI3edhG9EPg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"channel":"CAGCPB64A","ts":"1525281955.000451","message":{"text":"test
+        message","username":"FrontRowNewsBot","icons":{"emoji":":nerd_face:","image_64":"https:\/\/a.slack-edge.com\/37d58\/img\/emoji_2017_12_06\/apple\/1f913.png"},"bot_id":"BAGK547BL","type":"message","subtype":"bot_message","ts":"1525281955.000451"}}'
+    http_version: 
+  recorded_at: Wed, 02 May 2018 17:25:55 GMT
+recorded_with: VCR 4.0.0
